@@ -1,0 +1,23 @@
+name: Test notebook
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install nbval jupyter pandas numpy matplotlib yfinance arch
+
+    - name: Run notebook test
+      run: |
+        pytest --nbval "Copia di fix_casella_sheets_log_unificato_con_metriche_CORRETTO.ipynb"
