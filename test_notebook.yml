@@ -16,7 +16,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install nbval jupyter pandas numpy matplotlib yfinance arch
+        pip install nbval jupyter
+        pip install gspread arch python-dotenv openpyxl ipywidgets statsmodels
+        pip install --upgrade plotly
 
     - name: Run notebook test
       run: |
