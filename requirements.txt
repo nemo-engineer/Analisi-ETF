@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+plotly
+arch
+gspread
+openpyxl
+oauth2client
+python-dotenv
